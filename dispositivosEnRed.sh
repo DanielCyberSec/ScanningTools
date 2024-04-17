@@ -18,7 +18,7 @@ echo "Comprobando que exista nmap en el equipo:"
 if [ "$(echo $?)" == "0" ]; then
         echo -e "$(nmap --version | head -n 1 | awk '{print $1, $2, $3}') ............ [${verde} OK ${sinColor}]"
         sleep 3
-        clear
+        #clear
 	idRedCIDR=$(./miIdRed+CIDR.sh)
 	miIP=$(./miIP.sh)
 	echo Mi IP: $miIP
