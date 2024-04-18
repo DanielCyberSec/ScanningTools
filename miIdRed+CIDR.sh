@@ -8,6 +8,6 @@ sinColor="\e[0m"
 idRed=$(route | tail -n 1 | awk '{print $1}')
 mascara=$(route | tail -n 1 | awk '{print $3}')
 if [ $mascara == 255.255.255.0 ]; then
-	echo -e "$verde $idRed/24 $sinColor"
+	echo -e "$idRed/24"
 fi
 exit

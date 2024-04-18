@@ -45,7 +45,7 @@ if [ "$(echo $?)" == "0" ]; then
 			;;
 			2)
 			echo "Escaneando puertos abiertos de manera rápida pero ruidosa..."
-			echo -e "$(nmap -p- -sS --min-rate 6000 $ip | grep open)"
+			echo -e "$(nmap -p- -sS -sV --min-rate 6000 $ip | grep open)"
 			exit
 			;;
 			3)
