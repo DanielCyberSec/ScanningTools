@@ -22,6 +22,6 @@ if [ "$(echo $?)" == "0" ]; then
 	echo Mi IP: $miIP
 	echo Mi idRed+CIDR: $idRedCIDR
 	echo Dispositivos conectados:
-	echo -e "$verde$(sudo nmap -sP 192.168.100.0/24 | grep for | awk '{print $5}')$sinColor"
+	echo -e "$verde$(sudo nmap -sP $idRedCIDR | grep for | awk '{print $5}')$sinColor"
 fi
 exit
