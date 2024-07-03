@@ -65,8 +65,8 @@ if [ "$(echo $?)" == "0" ]; then
 			;;
 			6)
 			echo "Escaneo de vulnerabilidades en puertos abiertos + generación archivo XML..."
-			read -p $'Digita los puertos abiertos ej. 100,200,300 (puedes copiarlos de la salida de la opción 2 o 3):\n' openPorts
-			echo -e "$(nmap -p$openPorts -sV --script vuln --min-rate 6000 -T4 -A -O $ip -oX openPorts.xml)"
+			read -p $'Digita los puertos abiertos ej. 100,200,300 (puedes copiarlos de la salida de la opción 3 o 4):\n' openPorts
+			echo -e "$(nmap -p$openPorts -sV --script vuln -T4 -A -O $ip -oX openPorts.xml)"
 			exit
 			;;
 			7)
