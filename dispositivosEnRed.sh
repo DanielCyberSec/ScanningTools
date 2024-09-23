@@ -18,8 +18,8 @@ fi
 echo "Comprobando que exista nmap en el equipo:"
 if [ "$(echo $?)" == "0" ]; then
         echo -e "$(nmap --version | head -n 1 | awk '{print $1, $2, $3}') ............ [${verde} OK ${sinColor}]"
-	idRedCIDR=$(./miIdRed+CIDR.sh)
-	miIP=$(./miIP.sh)
+	idRedCIDR=$(bash miIdRed+CIDR.sh)
+	miIP=$(bash miIP.sh)
 	echo -e "Mi IP:$verde $miIP $sinColor"
 	echo -e "Mi idRed+CIDR:$verde $idRedCIDR $sinColor"
 	echo "Dispositivos conectados:"
